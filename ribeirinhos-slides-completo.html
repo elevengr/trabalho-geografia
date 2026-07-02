@@ -210,10 +210,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.content-fill .answer-card.fill {
-  flex: 1;
+  gap: 24px;
 }
 
 .content-fill .answer-split {
@@ -243,11 +240,6 @@ body {
   flex-shrink: 0;
 }
 
-
-
-.content-fill.has-sidebar {
-  margin-bottom: 0;
-}
 
 /* ── QUESTION CARD ── */
 .question-card {
@@ -290,11 +282,6 @@ body {
   border-radius: 18px;
   padding: 52px 38px;
   border: 1px solid rgba(21,101,192,0.06);
-  margin-bottom: 40px;
-}
-
-.answer-card:last-child {
-  margin-bottom: 0;
 }
 
 .answer-card .answer-label {
@@ -364,12 +351,10 @@ body {
 .answer-split {
   display: flex;
   gap: 48px;
-  margin-bottom: 40px;
 }
 
 .answer-split .answer-card {
   flex: 1;
-  margin-bottom: 0;
 }
 
 /* ── ANSWER SIDEBAR ── */
@@ -378,6 +363,15 @@ body {
   z-index: 3;
   display: flex;
   gap: 40px;
+}
+
+.content-fill .answer-sidebar {
+  flex: 1;
+  align-items: stretch;
+}
+
+.content-fill .answer-sidebar .side-item {
+  justify-content: center;
 }
 
 .answer-sidebar .side-item {
@@ -489,7 +483,6 @@ body {
   border-radius: 18px;
   padding: 44px 36px;
   border: 1px solid rgba(21,101,192,0.06);
-  margin-bottom: 40px;
 }
 
 .highlight-box p {
@@ -576,29 +569,28 @@ body {
   </div>
 
   <div class="content-fill">
-    <div class="answer-card fill">
+    <div class="answer-card">
       <div class="answer-label">RESPOSTA</div>
       <p>Somos famílias ribeirinhas que habitam as margens do Rio Água Boa há mais de um século. Nossa comunidade é formada por pescadores artesanais, extrativistas, agricultores de várzea e artesãos que dependem diretamente dos recursos do rio para viver.</p>
       <p>Nossa identidade é construída na relação de respeito e pertencimento com as águas. O saber tradicional é transmitido de geração em geração — os mais velhos ensinam a ler os sinais da natureza, os períodos de cheia e vazante, e as técnicas de pesca que não esgotam os recursos.</p>
       <p class="emphasis">Não somos moradores da beira do rio: somos o próprio rio em forma de gente.</p>
     </div>
-  </div>
-
-  <div class="answer-sidebar">
-    <div class="side-item">
-      <div class="side-num">+100</div>
-      <div class="side-label">Anos de ocupação</div>
-      <div class="side-text">Tradição ribeirinha às margens do Rio Água Boa transmitida por gerações.</div>
-    </div>
-    <div class="side-item">
-      <div class="side-num">5</div>
-      <div class="side-label">Atividades principais</div>
-      <div class="side-text">Pesca, agricultura, extrativismo, artesanato e manejo sustentável.</div>
-    </div>
-    <div class="side-item">
-      <div class="side-num">1</div>
-      <div class="side-label">Território</div>
-      <div class="side-text">O Rio Água Boa como casa, sustento e identidade do nosso povo.</div>
+    <div class="answer-sidebar">
+      <div class="side-item">
+        <div class="side-num">+100</div>
+        <div class="side-label">Anos de ocupação</div>
+        <div class="side-text">Tradição ribeirinha às margens do Rio Água Boa transmitida por gerações.</div>
+      </div>
+      <div class="side-item">
+        <div class="side-num">5</div>
+        <div class="side-label">Atividades principais</div>
+        <div class="side-text">Pesca, agricultura, extrativismo, artesanato e manejo sustentável.</div>
+      </div>
+      <div class="side-item">
+        <div class="side-num">1</div>
+        <div class="side-label">Território</div>
+        <div class="side-text">O Rio Água Boa como casa, sustento e identidade do nosso povo.</div>
+      </div>
     </div>
   </div>
 
@@ -644,23 +636,22 @@ body {
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="answer-sidebar">
-    <div class="side-item">
-      <div class="side-num">Cheia</div>
-      <div class="side-label">Dezembro a maio</div>
-      <div class="side-text">Período de pesca abundante e extrativismo na floresta alagável.</div>
-    </div>
-    <div class="side-item">
-      <div class="side-num">Vazante</div>
-      <div class="side-label">Junho a novembro</div>
-      <div class="side-text">Tempo de plantar e colher na várzea fértil deixada pelo rio.</div>
-    </div>
-    <div class="side-item">
-      <div class="side-num">90%</div>
-      <div class="side-label">Dependência direta</div>
-      <div class="side-text">Da nossa alimentação e renda vêm do rio e da floresta alagável.</div>
+    <div class="answer-sidebar">
+      <div class="side-item">
+        <div class="side-num">Cheia</div>
+        <div class="side-label">Dezembro a maio</div>
+        <div class="side-text">Período de pesca abundante e extrativismo na floresta alagável.</div>
+      </div>
+      <div class="side-item">
+        <div class="side-num">Vazante</div>
+        <div class="side-label">Junho a novembro</div>
+        <div class="side-text">Tempo de plantar e colher na várzea fértil deixada pelo rio.</div>
+      </div>
+      <div class="side-item">
+        <div class="side-num">90%</div>
+        <div class="side-label">Dependência direta</div>
+        <div class="side-text">Da nossa alimentação e renda vêm do rio e da floresta alagável.</div>
+      </div>
     </div>
   </div>
 
@@ -706,23 +697,22 @@ body {
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="answer-sidebar">
-    <div class="side-item">
-      <div class="side-num">Art. 231</div>
-      <div class="side-label">Constituição Federal</div>
-      <div class="side-text">Reconhece às comunidades tradicionais direitos originários sobre as terras que ocupam.</div>
-    </div>
-    <div class="side-item">
-      <div class="side-num">CF/88</div>
-      <div class="side-label">Marco legal</div>
-      <div class="side-text">Direito à reprodução física, cultural e social das comunidades tradicionais.</div>
-    </div>
-    <div class="side-item">
-      <div class="side-num">OIT 169</div>
-      <div class="side-label">Convenção Internacional</div>
-      <div class="side-text">Direito à consulta prévia, livre e informada sobre projetos em seus territórios.</div>
+    <div class="answer-sidebar">
+      <div class="side-item">
+        <div class="side-num">Art. 231</div>
+        <div class="side-label">Constituição Federal</div>
+        <div class="side-text">Reconhece às comunidades tradicionais direitos originários sobre as terras que ocupam.</div>
+      </div>
+      <div class="side-item">
+        <div class="side-num">CF/88</div>
+        <div class="side-label">Marco legal</div>
+        <div class="side-text">Direito à reprodução física, cultural e social das comunidades tradicionais.</div>
+      </div>
+      <div class="side-item">
+        <div class="side-num">OIT 169</div>
+        <div class="side-label">Convenção Internacional</div>
+        <div class="side-text">Direito à consulta prévia, livre e informada sobre projetos em seus territórios.</div>
+      </div>
     </div>
   </div>
 

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunidades Ribeirinhas — Tribunal das Comunidades Tradicionais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #E8E5DA;
+}
+
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #F7F5EF;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  padding: 80px 90px;
+}
+
+/* Decorative SVG — river/topographic motif */
+.decorative-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 660px;
+  height: 660px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Eyebrow */
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #1565C0;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 118px;
+  line-height: 1.04;
+  color: #1F2937;
+  margin-bottom: 28px;
+}
+
+/* Quote block */
+.quote-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 52px;
+}
+
+.quote-bar {
+  width: 6px;
+  flex-shrink: 0;
+  background: #1565C0;
+  border-radius: 3px;
+  align-self: stretch;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.35;
+  color: #0D478A;
+  max-width: 780px;
+}
+
+/* Cards row */
+.cards {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 38px 36px;
+  box-shadow: 0 8px 24px rgba(31,41,55,0.08);
+}
+
+.card-number {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #1565C0;
+  margin-bottom: 4px;
+}
+
+.card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #6B7278;
+}
+
+/* Footer divider */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: #D9D9D3;
+  margin-bottom: 14px;
+}
+
+/* Footer */
+.footer-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6B7278;
+  margin-bottom: 4px;
+}
+
+.footer-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1F2937;
+  line-height: 1.5;
+  max-width: 1120px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <!-- Decorative SVG -->
+  <svg class="decorative-bg" viewBox="0 0 660 660" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M660 520 C500 500 400 580 200 540 C80 510 20 600 0 660 L660 660 Z" fill="#1565C0" opacity="0.08"/>
+    <path d="M660 440 C480 410 350 500 180 460 C60 430 -10 530 0 660 L660 660 Z" fill="#1565C0" opacity="0.12"/>
+    <path d="M660 350 C520 320 400 420 220 380 C100 350 30 460 0 520 L0 660 L660 660 Z" fill="#1565C0" opacity="0.20"/>
+  </svg>
+
+  <!-- Eyebrow -->
+  <div class="eyebrow">GRUPO 3 · TRIBUNAL DAS COMUNIDADES TRADICIONAIS</div>
+
+  <!-- Title -->
+  <div class="title">Comunidades<br>Ribeirinhas</div>
+
+  <!-- Quote -->
+  <div class="quote-block">
+    <div class="quote-bar"></div>
+    <div class="quote-text">"O rio é nossa casa, nossa fonte de vida e nossa identidade."</div>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card">
+      <div class="card-number">01</div>
+      <div class="card-title">Quem somos</div>
+      <div class="card-text">Famílias que vivem às margens do Rio Água Boa, entre pesca artesanal, extrativismo e agricultura de várzea, há gerações.</div>
+    </div>
+    <div class="card">
+      <div class="card-number">02</div>
+      <div class="card-title">Nosso território</div>
+      <div class="card-text">O rio é estrada, alimento e identidade — o ciclo de cheia e vazante organiza toda a nossa vida e nossa economia.</div>
+    </div>
+    <div class="card">
+      <div class="card-number">03</div>
+      <div class="card-title">O que defendemos</div>
+      <div class="card-text">Consulta prévia, estudo de impacto ambiental independente e preservação do rio antes de qualquer decisão.</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-divider"></div>
+  <div class="footer-label">SITUAÇÃO-PROBLEMA</div>
+  <div class="footer-text">Um empreendimento pretende se instalar no território do Rio Água Boa, ameaçando o equilíbrio ambiental e o modo de vida ribeirinho.</div>
+
+</div>
+</body>
+</html>

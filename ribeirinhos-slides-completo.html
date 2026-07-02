@@ -195,11 +195,58 @@ body {
    CONTENT SLIDES
    ════════════════════════════════════════ */
 .content {
+  display: flex;
+  flex-direction: column;
   padding: 44px 90px 40px;
+  height: 100%;
 }
 
 .content .eyebrow {
+  flex-shrink: 0;
   margin-bottom: 18px;
+}
+
+.content-fill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-fill .answer-card.fill {
+  flex: 1;
+}
+
+.content-fill .answer-split {
+  flex: 1;
+}
+
+.content-fill .answer-split .answer-card {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.content-fill .pro-con-grid {
+  flex: 1;
+}
+
+.content-fill .pro-con-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-fill .pro-con-col p:last-child {
+  margin-bottom: 0;
+}
+
+.content-fill .highlight-box {
+  flex-shrink: 0;
+}
+
+
+
+.content-fill.has-sidebar {
+  margin-bottom: 0;
 }
 
 /* ── QUESTION CARD ── */
@@ -335,6 +382,9 @@ body {
 
 .answer-sidebar .side-item {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #FFFFFF;
   border-radius: 16px;
   padding: 18px 22px;
@@ -525,11 +575,13 @@ body {
     <div class="question-text">Quem <span class="highlight">somos</span>?</div>
   </div>
 
-  <div class="answer-card">
-    <div class="answer-label">RESPOSTA</div>
-    <p>Somos famílias ribeirinhas que habitam as margens do Rio Água Boa há mais de um século. Nossa comunidade é formada por pescadores artesanais, extrativistas, agricultores de várzea e artesãos que dependem diretamente dos recursos do rio para viver.</p>
-    <p>Nossa identidade é construída na relação de respeito e pertencimento com as águas. O saber tradicional é transmitido de geração em geração — os mais velhos ensinam a ler os sinais da natureza, os períodos de cheia e vazante, e as técnicas de pesca que não esgotam os recursos.</p>
-    <p class="emphasis">Não somos moradores da beira do rio: somos o próprio rio em forma de gente.</p>
+  <div class="content-fill">
+    <div class="answer-card fill">
+      <div class="answer-label">RESPOSTA</div>
+      <p>Somos famílias ribeirinhas que habitam as margens do Rio Água Boa há mais de um século. Nossa comunidade é formada por pescadores artesanais, extrativistas, agricultores de várzea e artesãos que dependem diretamente dos recursos do rio para viver.</p>
+      <p>Nossa identidade é construída na relação de respeito e pertencimento com as águas. O saber tradicional é transmitido de geração em geração — os mais velhos ensinam a ler os sinais da natureza, os períodos de cheia e vazante, e as técnicas de pesca que não esgotam os recursos.</p>
+      <p class="emphasis">Não somos moradores da beira do rio: somos o próprio rio em forma de gente.</p>
+    </div>
   </div>
 
   <div class="answer-sidebar">
@@ -572,23 +624,25 @@ body {
     <div class="question-text">Como <span class="highlight">vivemos</span>?</div>
   </div>
 
-  <div class="answer-card">
-    <div class="answer-label">RESPOSTA</div>
-    <p>Nosso modo de vida é organizado pelo ritmo do rio. Na cheia, os peixes se reproduzem e as áreas de várzea são fertilizadas; na vazante, plantamos e colhemos. Cada estação tem seu trabalho, sua comida e sua festa.</p>
-  </div>
-
-  <div class="answer-split">
+  <div class="content-fill">
     <div class="answer-card">
-      <ul>
-        <li><strong>Pesca artesanal:</strong> peixes como curimatã, tambaqui e tucunaré sustentam nossa alimentação e geram renda nas feiras da cidade.</li>
-        <li><strong>Agricultura de várzea:</strong> plantamos mandioca, milho, feijão e frutas nas terras férteis que o rio renova a cada enchente.</li>
-      </ul>
+      <div class="answer-label">RESPOSTA</div>
+      <p>Nosso modo de vida é organizado pelo ritmo do rio. Na cheia, os peixes se reproduzem e as áreas de várzea são fertilizadas; na vazante, plantamos e colhemos. Cada estação tem seu trabalho, sua comida e sua festa.</p>
     </div>
-    <div class="answer-card">
-      <ul>
-        <li><strong>Extrativismo:</strong> coletamos açaí, borracha, castanha e plantas medicinais da floresta alagável.</li>
-        <li><strong>Artesanato:</strong> com cipó, palha e barro, criamos peças que carregam nossa cultura e nossa história.</li>
-      </ul>
+
+    <div class="answer-split">
+      <div class="answer-card">
+        <ul>
+          <li><strong>Pesca artesanal:</strong> peixes como curimatã, tambaqui e tucunaré sustentam nossa alimentação e geram renda nas feiras da cidade.</li>
+          <li><strong>Agricultura de várzea:</strong> plantamos mandioca, milho, feijão e frutas nas terras férteis que o rio renova a cada enchente.</li>
+        </ul>
+      </div>
+      <div class="answer-card">
+        <ul>
+          <li><strong>Extrativismo:</strong> coletamos açaí, borracha, castanha e plantas medicinais da floresta alagável.</li>
+          <li><strong>Artesanato:</strong> com cipó, palha e barro, criamos peças que carregam nossa cultura e nossa história.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -632,23 +686,25 @@ body {
     <div class="question-text">Qual a importância do <span class="highlight">território</span> para nós?</div>
   </div>
 
-  <div class="answer-card">
-    <div class="answer-label">RESPOSTA</div>
-    <p>O território não é apenas o lugar onde moramos — é a condição de existência da nossa comunidade. Sem o Rio Água Boa em equilíbrio, nossa cultura, nossa economia e nossa identidade simplesmente deixam de existir.</p>
-  </div>
-
-  <div class="answer-split">
+  <div class="content-fill">
     <div class="answer-card">
-      <ul>
-        <li><strong>Identidade cultural:</strong> as narrativas, os saberes, as festas e as crenças da nossa comunidade nascem da relação com o rio.</li>
-        <li><strong>Sobrevivência material:</strong> é do território que tiramos nossa comida, nossa água, nossa moradia e nossa renda.</li>
-      </ul>
+      <div class="answer-label">RESPOSTA</div>
+      <p>O território não é apenas o lugar onde moramos — é a condição de existência da nossa comunidade. Sem o Rio Água Boa em equilíbrio, nossa cultura, nossa economia e nossa identidade simplesmente deixam de existir.</p>
     </div>
-    <div class="answer-card">
-      <ul>
-        <li><strong>Território como sujeito:</strong> para nós, o rio não é um recurso a ser explorado — é um ente vivo com o qual nos relacionamos.</li>
-        <li><strong>Direito constitucional:</strong> a Constituição Federal de 1988 garante às comunidades tradicionais o direito ao território.</li>
-      </ul>
+
+    <div class="answer-split">
+      <div class="answer-card">
+        <ul>
+          <li><strong>Identidade cultural:</strong> as narrativas, os saberes, as festas e as crenças da nossa comunidade nascem da relação com o rio.</li>
+          <li><strong>Sobrevivência material:</strong> é do território que tiramos nossa comida, nossa água, nossa moradia e nossa renda.</li>
+        </ul>
+      </div>
+      <div class="answer-card">
+        <ul>
+          <li><strong>Território como sujeito:</strong> para nós, o rio não é um recurso a ser explorado — é um ente vivo com o qual nos relacionamos.</li>
+          <li><strong>Direito constitucional:</strong> a Constituição Federal de 1988 garante às comunidades tradicionais o direito ao território.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -692,19 +748,21 @@ body {
     <div class="question-text">Benefícios e <span class="highlight">prejuízos</span> do projeto?</div>
   </div>
 
-  <div class="pro-con-grid">
-    <div class="pro-con-col pro">
-      <h3>Possíveis benefícios (segundo a empresa)</h3>
-      <p>→ Geração de empregos temporários na construção civil e serviços locais.</p>
-      <p>→ Aumento da arrecadação municipal e promessa de investimentos em infraestrutura.</p>
-      <p>→ Demanda por produtos e serviços locais durante a operação.</p>
-    </div>
-    <div class="pro-con-col con">
-      <h3>Prejuízos comprovados (nossa perspectiva)</h3>
-      <p>→ Poluição do Rio Água Boa por rejeitos industriais, comprometendo a pesca e o abastecimento de água.</p>
-      <p>→ Deslocamento forçado de famílias e destruição de áreas de várzea férteis para plantio.</p>
-      <p>→ Rompimento dos laços comunitários e da transmissão de saberes tradicionais.</p>
-      <p>→ Empregos temporários e de baixa qualificação — o lucro vai para acionistas, o passivo ambiental fica conosco.</p>
+  <div class="content-fill">
+    <div class="pro-con-grid">
+      <div class="pro-con-col pro">
+        <h3>Possíveis benefícios (segundo a empresa)</h3>
+        <p>→ Geração de empregos temporários na construção civil e serviços locais.</p>
+        <p>→ Aumento da arrecadação municipal e promessa de investimentos em infraestrutura.</p>
+        <p>→ Demanda por produtos e serviços locais durante a operação.</p>
+      </div>
+      <div class="pro-con-col con">
+        <h3>Prejuízos comprovados (nossa perspectiva)</h3>
+        <p>→ Poluição do Rio Água Boa por rejeitos industriais, comprometendo a pesca e o abastecimento de água.</p>
+        <p>→ Deslocamento forçado de famílias e destruição de áreas de várzea férteis para plantio.</p>
+        <p>→ Rompimento dos laços comunitários e da transmissão de saberes tradicionais.</p>
+        <p>→ Empregos temporários e de baixa qualificação — o lucro vai para acionistas, o passivo ambiental fica conosco.</p>
+      </div>
     </div>
   </div>
 
@@ -730,24 +788,26 @@ body {
     <div class="question-text">O que <span class="highlight">defendemos</span>?</div>
   </div>
 
-  <div class="highlight-box">
-    <p>"Não somos contra o desenvolvimento, mas contra um desenvolvimento que nos exclui e destrói o que somos."</p>
-  </div>
-
-  <div class="answer-split">
-    <div class="answer-card">
-      <ul>
-        <li><strong>Consulta prévia, livre e informada</strong> — Convenção 169 da OIT, da qual o Brasil é signatário.</li>
-        <li><strong>EIA independente</strong> — Estudo de Impacto Ambiental por equipe escolhida em acordo com a comunidade.</li>
-        <li><strong>Preservação do Rio Água Boa</strong> — ciclo hidrológico, qualidade da água e estoques pesqueiros.</li>
-      </ul>
+  <div class="content-fill">
+    <div class="highlight-box">
+      <p>"Não somos contra o desenvolvimento, mas contra um desenvolvimento que nos exclui e destrói o que somos."</p>
     </div>
-    <div class="answer-card">
-      <ul>
-        <li><strong>Participação nos benefícios</strong> — compensação justa e participação nos resultados se o projeto for viável.</li>
-        <li><strong>Nenhuma remoção forçada</strong> — o território ribeirinho é nossa casa e não será negociado sob pressão.</li>
-        <li><strong>Fiscalização permanente</strong> — participação da comunidade no monitoramento ambiental contínuo.</li>
-      </ul>
+
+    <div class="answer-split">
+      <div class="answer-card">
+        <ul>
+          <li><strong>Consulta prévia, livre e informada</strong> — Convenção 169 da OIT, da qual o Brasil é signatário.</li>
+          <li><strong>EIA independente</strong> — Estudo de Impacto Ambiental por equipe escolhida em acordo com a comunidade.</li>
+          <li><strong>Preservação do Rio Água Boa</strong> — ciclo hidrológico, qualidade da água e estoques pesqueiros.</li>
+        </ul>
+      </div>
+      <div class="answer-card">
+        <ul>
+          <li><strong>Participação nos benefícios</strong> — compensação justa e participação nos resultados se o projeto for viável.</li>
+          <li><strong>Nenhuma remoção forçada</strong> — o território ribeirinho é nossa casa e não será negociado sob pressão.</li>
+          <li><strong>Fiscalização permanente</strong> — participação da comunidade no monitoramento ambiental contínuo.</li>
+        </ul>
+      </div>
     </div>
   </div>
 

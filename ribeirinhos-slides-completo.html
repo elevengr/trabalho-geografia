@@ -43,7 +43,7 @@ body {
   z-index: 0;
 }
 
-/* ── BLOB DECORATIVE ── */
+/* ── BLOB ── */
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -54,17 +54,19 @@ body {
 /* ── EYEBROW ── */
 .eyebrow {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #1565C0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
-/* ── COVER SPECIFICS ── */
+/* ════════════════════════════════════════
+   COVER
+   ════════════════════════════════════════ */
 .cover {
   padding: 70px 90px;
 }
@@ -125,12 +127,10 @@ body {
 
 .cover-card {
   flex: 1;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(6px);
+  background: #FFFFFF;
   border-radius: 20px;
   padding: 32px 30px;
-  box-shadow: 0 6px 20px rgba(31,41,55,0.06);
-  border: 1px solid rgba(255,255,255,0.6);
+  border: 1px solid rgba(21,101,192,0.08);
 }
 
 .cover-card-num {
@@ -191,84 +191,116 @@ body {
   max-width: 1000px;
 }
 
-/* ── CONTENT SLIDE SPECIFICS ── */
+/* ════════════════════════════════════════
+   CONTENT SLIDES
+   ════════════════════════════════════════ */
 .content {
-  padding: 70px 90px 50px;
+  padding: 60px 90px 50px;
 }
 
 .content .eyebrow {
-  position: relative;
-  z-index: 3;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
-.content-title-wrap {
+/* ── QUESTION CARD ── */
+.question-card {
   position: relative;
   z-index: 3;
-  margin-bottom: 32px;
+  background: rgba(21,101,192,0.06);
+  border-radius: 20px;
+  padding: 28px 36px;
+  margin-bottom: 28px;
+  border-left: 6px solid #1565C0;
 }
 
-.content-title {
+.question-card .question-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1565C0;
+  margin-bottom: 6px;
+}
+
+.question-card .question-text {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 68px;
-  line-height: 1.12;
+  font-size: 52px;
+  line-height: 1.15;
   color: #1F2937;
 }
 
-.content-title .highlight {
+.question-card .question-text .highlight {
   color: #1565C0;
 }
 
-.content-body {
+/* ── ANSWER CARD ── */
+.answer-card {
   position: relative;
   z-index: 3;
-  display: flex;
-  gap: 36px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 36px;
+  border: 1px solid rgba(21,101,192,0.06);
+  margin-bottom: 20px;
 }
 
-.content-main {
-  flex: 1;
+.answer-card:last-child {
+  margin-bottom: 0;
 }
 
-.content-main p {
+.answer-card .answer-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6B7278;
+  margin-bottom: 10px;
+}
+
+.answer-card p {
   font-family: 'Inter', sans-serif;
   font-size: 19px;
   font-weight: 400;
   line-height: 1.7;
   color: #1F2937;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
-.content-main p.emphasis {
-  font-size: 21px;
+.answer-card p:last-child {
+  margin-bottom: 0;
+}
+
+.answer-card p.emphasis {
+  font-size: 20px;
   font-weight: 500;
   color: #1565C0;
   border-left: 4px solid #1565C0;
   padding-left: 18px;
-  border-radius: 2px;
 }
 
-.content-main ul {
+.answer-card ul {
   list-style: none;
   padding: 0;
 }
 
-.content-main ul li {
+.answer-card ul li {
   font-family: 'Inter', sans-serif;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
   color: #1F2937;
-  padding: 8px 0 8px 32px;
+  padding: 7px 0 7px 32px;
   position: relative;
 }
 
-.content-main ul li::before {
+.answer-card ul li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 17px;
+  top: 16px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -276,77 +308,99 @@ body {
   opacity: 0.3;
 }
 
-.content-main ul li strong {
+.answer-card ul li strong {
   color: #1565C0;
   font-weight: 600;
 }
 
-.content-side {
-  width: 380px;
-  flex-shrink: 0;
+/* ── ANSWER CARD (SIDE SPLIT) ── */
+.answer-split {
+  display: flex;
+  gap: 24px;
 }
 
-.content-side-card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(4px);
-  border-radius: 20px;
-  padding: 28px 26px;
-  border: 1px solid rgba(255,255,255,0.5);
-  box-shadow: 0 6px 20px rgba(31,41,55,0.05);
-}
-
-.content-side-card p {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #1F2937;
+.answer-split .answer-card {
+  flex: 1;
   margin-bottom: 0;
 }
 
-.content-side-card p.emphasis {
-  font-size: 18px;
-  font-weight: 500;
-  color: #1565C0;
-  border-left: none;
-  padding-left: 0;
+/* ── ANSWER SIDE ── */
+.answer-sidebar {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  gap: 20px;
 }
 
-/* ── PRO/CON LAYOUT ── */
+.answer-sidebar .side-item {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 22px 26px;
+  border: 1px solid rgba(21,101,192,0.06);
+}
+
+.answer-sidebar .side-item .side-num {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #1565C0;
+  margin-bottom: 2px;
+}
+
+.answer-sidebar .side-item .side-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 4px;
+}
+
+.answer-sidebar .side-item .side-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7278;
+  line-height: 1.5;
+}
+
+/* ── PRO/CON ── */
 .pro-con-grid {
   display: flex;
-  gap: 32px;
-  margin-top: 4px;
+  gap: 28px;
 }
 
 .pro-con-col {
   flex: 1;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 28px 30px;
-  border: 1px solid rgba(255,255,255,0.5);
-  box-shadow: 0 6px 20px rgba(31,41,55,0.05);
+}
+
+.pro-con-col.pro {
+  background: rgba(46,125,50,0.06);
+  border-left: 6px solid #2E7D32;
+}
+
+.pro-con-col.con {
+  background: rgba(198,40,40,0.06);
+  border-left: 6px solid #C62828;
 }
 
 .pro-con-col h3 {
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   color: #1F2937;
   margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid;
 }
 
 .pro-con-col.pro h3 {
   color: #2E7D32;
-  border-color: rgba(46,125,50,0.2);
 }
 
 .pro-con-col.con h3 {
   color: #C62828;
-  border-color: rgba(198,40,40,0.2);
 }
 
 .pro-con-col p {
@@ -355,32 +409,11 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #1F2937;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   padding-left: 0;
 }
 
 .pro-con-col p:last-child {
-  margin-bottom: 0;
-}
-
-.pro-con-col p .icon {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-/* ── SIDE CARD STACK ── */
-.side-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.side-stack .content-side-card {
-  padding: 20px 24px;
-}
-
-.side-stack .content-side-card p {
-  font-size: 15px;
   margin-bottom: 0;
 }
 
@@ -393,57 +426,28 @@ body {
   font-weight: 700;
   font-size: 17px;
   color: #1565C0;
-  opacity: 0.35;
+  opacity: 0.3;
   z-index: 3;
 }
 
-/* ── ADAPT LAYOUTS ── */
-.content-body.wide {
-  flex-direction: column;
-  gap: 20px;
+/* ── HIGHLIGHT BOX ── */
+.highlight-box {
+  position: relative;
+  z-index: 3;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 24px 32px;
+  border: 1px solid rgba(21,101,192,0.06);
+  margin-bottom: 22px;
 }
 
-.content-body.wide .content-main {
-  max-width: 100%;
-}
-
-.flex-row {
-  display: flex;
-  gap: 32px;
-}
-
-.flex-row .flex-col {
-  flex: 1;
-}
-
-/* ── CIRCLE ACCENT ── */
-.circle-accent {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ── SMOOTH WAVE BOTTOM ── */
-.wave-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  z-index: 0;
-}
-
-/* ── WIDE LIST ── */
-.content-main ul.wide-list li {
-  font-size: 18px;
-  padding: 7px 0 7px 28px;
-}
-
-.content-main ul.wide-list li::before {
-  top: 16px;
-  width: 9px;
-  height: 9px;
+.highlight-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: #1565C0;
+  margin-bottom: 0;
 }
 </style>
 </head>
@@ -457,10 +461,6 @@ body {
   <svg class="wave-top" viewBox="0 0 1920 340" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 300 C400 200 600 340 1000 260 C1400 180 1600 300 1920 200 L1920 0 L0 0 Z" fill="#1565C0" opacity="0.06"/>
     <path d="M0 320 C300 240 500 340 900 280 C1300 220 1500 320 1920 240 L1920 340 L0 340 Z" fill="#1565C0" opacity="0.04"/>
-  </svg>
-
-  <svg class="wave-bottom" viewBox="0 0 1920 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 120 C300 180 500 80 900 140 C1300 200 1500 80 1920 140 L1920 200 L0 200 Z" fill="#1565C0" opacity="0.04"/>
   </svg>
 
   <div class="blob" style="width:500px;height:500px;background:radial-gradient(circle at center,#1565C0 0%,transparent 70%);opacity:0.04;top:-120px;right:-80px;"></div>
@@ -516,25 +516,36 @@ body {
   </svg>
 
   <div class="blob" style="width:420px;height:420px;background:radial-gradient(circle at center,#1565C0 0%,transparent 70%);opacity:0.03;top:-100px;right:-60px;"></div>
-  <div class="blob" style="width:280px;height:280px;background:radial-gradient(circle at center,#1565C0 0%,transparent 70%);opacity:0.03;bottom:80px;left:-40px;"></div>
 
   <div class="eyebrow">COMUNIDADES RIBEIRINHAS · TRIBUNAL DAS COMUNIDADES TRADICIONAIS</div>
 
-  <div class="content-title-wrap">
-    <div class="content-title">Quem <span class="highlight">somos</span></div>
+  <div class="question-card">
+    <div class="question-label">PERGUNTA</div>
+    <div class="question-text">Quem <span class="highlight">somos</span>?</div>
   </div>
 
-  <div class="content-body">
-    <div class="content-main">
-      <p>Somos famílias ribeirinhas que habitam as margens do Rio Água Boa há mais de um século. Nossa comunidade é formada por pescadores artesanais, extrativistas, agricultores de várzea e artesãos que dependem diretamente dos recursos do rio para viver.</p>
-      <p>Nossa identidade é construída na relação de respeito e pertencimento com as águas. O saber tradicional é transmitido de geração em geração — os mais velhos ensinam a ler os sinais da natureza, os períodos de cheia e vazante, e as técnicas de pesca que não esgotam os recursos.</p>
-      <p class="emphasis">Não somos moradores da beira do rio: somos o próprio rio em forma de gente.</p>
+  <div class="answer-card">
+    <div class="answer-label">RESPOSTA</div>
+    <p>Somos famílias ribeirinhas que habitam as margens do Rio Água Boa há mais de um século. Nossa comunidade é formada por pescadores artesanais, extrativistas, agricultores de várzea e artesãos que dependem diretamente dos recursos do rio para viver.</p>
+    <p>Nossa identidade é construída na relação de respeito e pertencimento com as águas. O saber tradicional é transmitido de geração em geração — os mais velhos ensinam a ler os sinais da natureza, os períodos de cheia e vazante, e as técnicas de pesca que não esgotam os recursos.</p>
+    <p class="emphasis">Não somos moradores da beira do rio: somos o próprio rio em forma de gente.</p>
+  </div>
+
+  <div class="answer-sidebar">
+    <div class="side-item">
+      <div class="side-num">+100</div>
+      <div class="side-label">Anos de ocupação</div>
+      <div class="side-text">Tradição ribeirinha às margens do Rio Água Boa transmitida por gerações.</div>
     </div>
-    <div class="content-side">
-      <div class="content-side-card">
-        <p class="emphasis">+100 anos</p>
-        <p>de ocupação tradicional às margens do Rio Água Boa</p>
-      </div>
+    <div class="side-item">
+      <div class="side-num">5</div>
+      <div class="side-label">Atividades principais</div>
+      <div class="side-text">Pesca, agricultura, extrativismo, artesanato e manejo sustentável.</div>
+    </div>
+    <div class="side-item">
+      <div class="side-num">1</div>
+      <div class="side-label">Território</div>
+      <div class="side-text">O Rio Água Boa como casa, sustento e identidade do nosso povo.</div>
     </div>
   </div>
 
@@ -555,31 +566,46 @@ body {
 
   <div class="eyebrow">COMUNIDADES RIBEIRINHAS · TRIBUNAL DAS COMUNIDADES TRADICIONAIS</div>
 
-  <div class="content-title-wrap">
-    <div class="content-title">Como <span class="highlight">vivemos</span></div>
+  <div class="question-card">
+    <div class="question-label">PERGUNTA</div>
+    <div class="question-text">Como <span class="highlight">vivemos</span>?</div>
   </div>
 
-  <div class="content-body">
-    <div class="content-main">
-      <p>Nosso modo de vida é organizado pelo ritmo do rio. Na cheia, os peixes se reproduzem e as áreas de várzea são fertilizadas; na vazante, plantamos e colhemos. Cada estação tem seu trabalho, sua comida e sua festa.</p>
+  <div class="answer-card">
+    <div class="answer-label">RESPOSTA</div>
+    <p>Nosso modo de vida é organizado pelo ritmo do rio. Na cheia, os peixes se reproduzem e as áreas de várzea são fertilizadas; na vazante, plantamos e colhemos. Cada estação tem seu trabalho, sua comida e sua festa.</p>
+  </div>
+
+  <div class="answer-split">
+    <div class="answer-card">
       <ul>
         <li><strong>Pesca artesanal:</strong> peixes como curimatã, tambaqui e tucunaré sustentam nossa alimentação e geram renda nas feiras da cidade.</li>
         <li><strong>Agricultura de várzea:</strong> plantamos mandioca, milho, feijão e frutas nas terras férteis que o rio renova a cada enchente.</li>
+      </ul>
+    </div>
+    <div class="answer-card">
+      <ul>
         <li><strong>Extrativismo:</strong> coletamos açaí, borracha, castanha e plantas medicinais da floresta alagável.</li>
         <li><strong>Artesanato:</strong> com cipó, palha e barro, criamos peças que carregam nossa cultura e nossa história.</li>
       </ul>
     </div>
-    <div class="content-side">
-      <div class="side-stack">
-        <div class="content-side-card">
-          <p class="emphasis">Ciclo da várzea</p>
-          <p>Cheia (dez-mai): pesca e extrativismo<br>Vazante (jun-nov): plantio e colheita</p>
-        </div>
-        <div class="content-side-card">
-          <p class="emphasis">Relação direta</p>
-          <p>90% da nossa alimentação e renda vem do rio e da floresta alagável</p>
-        </div>
-      </div>
+  </div>
+
+  <div class="answer-sidebar">
+    <div class="side-item">
+      <div class="side-num">Cheia</div>
+      <div class="side-label">Dezembro a maio</div>
+      <div class="side-text">Período de pesca abundante e extrativismo na floresta alagável.</div>
+    </div>
+    <div class="side-item">
+      <div class="side-num">Vazante</div>
+      <div class="side-label">Junho a novembro</div>
+      <div class="side-text">Tempo de plantar e colher na várzea fértil deixada pelo rio.</div>
+    </div>
+    <div class="side-item">
+      <div class="side-num">90%</div>
+      <div class="side-label">Dependência direta</div>
+      <div class="side-text">Da nossa alimentação e renda vêm do rio e da floresta alagável.</div>
     </div>
   </div>
 
@@ -600,25 +626,46 @@ body {
 
   <div class="eyebrow">COMUNIDADES RIBEIRINHAS · TRIBUNAL DAS COMUNIDADES TRADICIONAIS</div>
 
-  <div class="content-title-wrap">
-    <div class="content-title">Importância do <span class="highlight">território</span></div>
+  <div class="question-card">
+    <div class="question-label">PERGUNTA</div>
+    <div class="question-text">Qual a importância do <span class="highlight">território</span> para nós?</div>
   </div>
 
-  <div class="content-body">
-    <div class="content-main">
-      <p>O território não é apenas o lugar onde moramos — é a condição de existência da nossa comunidade. Sem o Rio Água Boa em equilíbrio, nossa cultura, nossa economia e nossa identidade simplesmente deixam de existir.</p>
+  <div class="answer-card">
+    <div class="answer-label">RESPOSTA</div>
+    <p>O território não é apenas o lugar onde moramos — é a condição de existência da nossa comunidade. Sem o Rio Água Boa em equilíbrio, nossa cultura, nossa economia e nossa identidade simplesmente deixam de existir.</p>
+  </div>
+
+  <div class="answer-split">
+    <div class="answer-card">
       <ul>
         <li><strong>Identidade cultural:</strong> as narrativas, os saberes, as festas e as crenças da nossa comunidade nascem da relação com o rio.</li>
         <li><strong>Sobrevivência material:</strong> é do território que tiramos nossa comida, nossa água, nossa moradia e nossa renda.</li>
-        <li><strong>Território como sujeito:</strong> para nós, o rio não é um recurso a ser explorado — é um ente vivo com o qual nos relacionamos.</li>
-        <li><strong>Direito constitucional:</strong> a Constituição Federal de 1988 garante às comunidades tradicionais o direito ao território como condição para sua reprodução física, cultural e social.</li>
       </ul>
     </div>
-    <div class="content-side">
-      <div class="content-side-card">
-        <p class="emphasis">Art. 231 da CF/88</p>
-        <p>"São reconhecidos aos índios e às comunidades tradicionais seus direitos originários sobre as terras que tradicionalmente ocupam."</p>
-      </div>
+    <div class="answer-card">
+      <ul>
+        <li><strong>Território como sujeito:</strong> para nós, o rio não é um recurso a ser explorado — é um ente vivo com o qual nos relacionamos.</li>
+        <li><strong>Direito constitucional:</strong> a Constituição Federal de 1988 garante às comunidades tradicionais o direito ao território.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="answer-sidebar">
+    <div class="side-item">
+      <div class="side-num">Art. 231</div>
+      <div class="side-label">Constituição Federal</div>
+      <div class="side-text">Reconhece às comunidades tradicionais direitos originários sobre as terras que ocupam.</div>
+    </div>
+    <div class="side-item">
+      <div class="side-num">CF/88</div>
+      <div class="side-label">Marco legal</div>
+      <div class="side-text">Direito à reprodução física, cultural e social das comunidades tradicionais.</div>
+    </div>
+    <div class="side-item">
+      <div class="side-num">OIT 169</div>
+      <div class="side-label">Convenção Internacional</div>
+      <div class="side-text">Direito à consulta prévia, livre e informada sobre projetos em seus territórios.</div>
     </div>
   </div>
 
@@ -639,25 +686,24 @@ body {
 
   <div class="eyebrow">COMUNIDADES RIBEIRINHAS · TRIBUNAL DAS COMUNIDADES TRADICIONAIS</div>
 
-  <div class="content-title-wrap">
-    <div class="content-title">Benefícios e <span class="highlight">prejuízos</span></div>
+  <div class="question-card">
+    <div class="question-label">PERGUNTA</div>
+    <div class="question-text">Benefícios e <span class="highlight">prejuízos</span> do projeto?</div>
   </div>
 
-  <div class="content-body" style="flex-direction:column;gap:8px;">
-    <div class="pro-con-grid">
-      <div class="pro-con-col pro">
-        <h3>Possíveis benefícios (segundo a empresa)</h3>
-        <p><span class="icon">→</span> Geração de empregos temporários na construção civil e serviços locais.</p>
-        <p><span class="icon">→</span> Aumento da arrecadação municipal e promessa de investimentos em infraestrutura.</p>
-        <p><span class="icon">→</span> Demanda por produtos e serviços locais durante a operação.</p>
-      </div>
-      <div class="pro-con-col con">
-        <h3>Prejuízos comprovados (nossa perspectiva)</h3>
-        <p><span class="icon">→</span> Poluição do Rio Água Boa por rejeitos industriais, comprometendo a pesca e o abastecimento de água.</p>
-        <p><span class="icon">→</span> Deslocamento forçado de famílias e destruição de áreas de várzea férteis para plantio.</p>
-        <p><span class="icon">→</span> Rompimento dos laços comunitários e da transmissão de saberes tradicionais.</p>
-        <p><span class="icon">→</span> Empregos temporários e de baixa qualificação — o lucro vai para acionistas, o passivo ambiental fica conosco.</p>
-      </div>
+  <div class="pro-con-grid">
+    <div class="pro-con-col pro">
+      <h3>Possíveis benefícios (segundo a empresa)</h3>
+      <p>→ Geração de empregos temporários na construção civil e serviços locais.</p>
+      <p>→ Aumento da arrecadação municipal e promessa de investimentos em infraestrutura.</p>
+      <p>→ Demanda por produtos e serviços locais durante a operação.</p>
+    </div>
+    <div class="pro-con-col con">
+      <h3>Prejuízos comprovados (nossa perspectiva)</h3>
+      <p>→ Poluição do Rio Água Boa por rejeitos industriais, comprometendo a pesca e o abastecimento de água.</p>
+      <p>→ Deslocamento forçado de famílias e destruição de áreas de várzea férteis para plantio.</p>
+      <p>→ Rompimento dos laços comunitários e da transmissão de saberes tradicionais.</p>
+      <p>→ Empregos temporários e de baixa qualificação — o lucro vai para acionistas, o passivo ambiental fica conosco.</p>
     </div>
   </div>
 
@@ -678,29 +724,29 @@ body {
 
   <div class="eyebrow">COMUNIDADES RIBEIRINHAS · TRIBUNAL DAS COMUNIDADES TRADICIONAIS</div>
 
-  <div class="content-title-wrap">
-    <div class="content-title">O que <span class="highlight">defendemos</span></div>
+  <div class="question-card">
+    <div class="question-label">PERGUNTA</div>
+    <div class="question-text">O que <span class="highlight">defendemos</span>?</div>
   </div>
 
-  <div class="content-body" style="flex-direction:column;gap:20px;">
-    <div style="background:rgba(255,255,255,0.75);backdrop-filter:blur(4px);border-radius:20px;padding:24px 30px;border:1px solid rgba(255,255,255,0.5);box-shadow:0 6px 20px rgba(31,41,55,0.05);">
-      <p style="font-size:21px;font-weight:500;color:#1565C0;font-style:italic;margin-bottom:0;">"Não somos contra o desenvolvimento, mas contra um desenvolvimento que nos exclui e destrói o que somos."</p>
+  <div class="highlight-box">
+    <p>"Não somos contra o desenvolvimento, mas contra um desenvolvimento que nos exclui e destrói o que somos."</p>
+  </div>
+
+  <div class="answer-split">
+    <div class="answer-card">
+      <ul>
+        <li><strong>Consulta prévia, livre e informada</strong> — Convenção 169 da OIT, da qual o Brasil é signatário.</li>
+        <li><strong>EIA independente</strong> — Estudo de Impacto Ambiental por equipe escolhida em acordo com a comunidade.</li>
+        <li><strong>Preservação do Rio Água Boa</strong> — ciclo hidrológico, qualidade da água e estoques pesqueiros.</li>
+      </ul>
     </div>
-    <div class="flex-row">
-      <div class="flex-col">
-        <ul class="wide-list">
-          <li><strong>Consulta prévia, livre e informada</strong> — Convenção 169 da OIT, da qual o Brasil é signatário.</li>
-          <li><strong>EIA independente</strong> — Estudo de Impacto Ambiental por equipe multidisciplinar escolhida em acordo com a comunidade.</li>
-          <li><strong>Preservação do Rio Água Boa</strong> — manutenção do ciclo hidrológico, qualidade da água e estoques pesqueiros.</li>
-        </ul>
-      </div>
-      <div class="flex-col">
-        <ul class="wide-list">
-          <li><strong>Participação nos benefícios</strong> — compensação justa e participação nos resultados caso o projeto seja viável.</li>
-          <li><strong>Nenhuma remoção forçada</strong> — o território ribeirinho é nossa casa e não será negociado sob pressão.</li>
-          <li><strong>Fiscalização permanente</strong> — participação da comunidade no monitoramento ambiental contínuo.</li>
-        </ul>
-      </div>
+    <div class="answer-card">
+      <ul>
+        <li><strong>Participação nos benefícios</strong> — compensação justa e participação nos resultados se o projeto for viável.</li>
+        <li><strong>Nenhuma remoção forçada</strong> — o território ribeirinho é nossa casa e não será negociado sob pressão.</li>
+        <li><strong>Fiscalização permanente</strong> — participação da comunidade no monitoramento ambiental contínuo.</li>
+      </ul>
     </div>
   </div>
 
